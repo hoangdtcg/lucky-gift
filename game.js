@@ -10,4 +10,8 @@ $(document).ready(function () {
         },3000)
     })
 
+    $('#confirm-gift').click(function(){
+        window.location.reload();
+    });
+
 })
