@@ -1,5 +1,7 @@
+import confetti from "https://cdn.skypack.dev/canvas-confetti";
+
 $(document).ready(function () {
-    $('img').click(function(){
+    $('img.item').click(function(){
         $(".overlay").show();
         $(".gift-content").hide();
         $(".modal-footer").hide();
@@ -7,6 +9,13 @@ $(document).ready(function () {
             $("#open-anim").hide();
             $(".gift-content").show();
             $(".modal-footer").show();
+            confetti(
+                {
+                    particleCount: 500,
+                    spread: 700,
+                    origin: { y: 0.4 }
+                }
+            );
         },3000)
     })
 
